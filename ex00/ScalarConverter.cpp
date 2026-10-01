@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 17:10:00 by nefimov           #+#    #+#             */
-/*   Updated: 2026/10/01 17:10:01 by nefimov          ###   ########.fr       */
+/*   Updated: 2026/10/01 19:20:49 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,9 +129,9 @@ namespace
 		errno = 0;
 		result = std::strtod(value.c_str(), &end);
 		return end != value.c_str() && *end == '\0'
-			&& (errno != ERANGE || result != result
-				|| result == std::numeric_limits<double>::infinity()
-				|| result == -std::numeric_limits<double>::infinity());
+			   && (errno != ERANGE || result != result
+				  || result == std::numeric_limits<double>::infinity()
+				  || result == -std::numeric_limits<double>::infinity());
 	}
 
 	bool isNan(double value)

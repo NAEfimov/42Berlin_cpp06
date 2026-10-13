@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 15:00:05 by nefimov           #+#    #+#             */
-/*   Updated: 2026/10/13 15:23:09 by nefimov          ###   ########.fr       */
+/*   Updated: 2026/10/13 15:31:25 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int main()
 		std::cout << std::endl;
 	}
 	std::cout << "Null pointer: ";
-	identify(static_cast<Base *>(NULL));
+	
+	Base *p = NULL;
+	identify(*p);
 	return 0;
 }
